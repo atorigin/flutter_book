@@ -6,15 +6,31 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     // ignore: prefer_const_constructors
     return Scaffold(
-      body: Container(
-        width: 500,
-        height: 500,
-        color: Colors.blue,
-        child: Text(
-          "個人首頁粗稿",
-          style: TextStyle(fontSize: 30),
+      body: Column(
+        children: [
+          Container(
+            color: Colors.blue,
+            child: Text(
+              "大頭照預留區",
+              style: TextStyle(fontSize: 30),
+            ),
+          ),
+          Container(
+            color: Colors.red,
+            child: Text(
+              "簡介",
+              style: TextStyle(fontSize: 30),
+            ),
+          ),
+          Container(
+            color: Colors.amber,
+            child: Text(
+              "座右銘",
+              style: TextStyle(fontSize: 30),
+            ),
           )
-        )
+        ],
+      )
       );
   }
 }
