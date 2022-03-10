@@ -37,11 +37,52 @@ class HomeScreen extends StatelessWidget {
     //     ]
     //   ),
     // );
+
+    // 3-4-2 Expanded
+    // return Scaffold(
+    //   body: Column(
+    //     children: [
+    //       Expanded(
+    //         child: Container(
+    //           width: 500,
+    //           height: 500,
+    //           color: Colors.blue,
+    //           child: Text(
+    //             "大頭照預留區",
+    //             style: TextStyle(fontSize: 30),
+    //           ),
+    //         )
+    //       ),
+    //       Expanded(
+    //         child: Container(
+    //           height: 200,
+    //           width: 200,
+    //           color: Colors.red,
+    //           child: Text(
+    //             "簡介",
+    //             style: TextStyle(fontSize: 30),
+    //           ),
+    //         )
+    //       ),
+    //       Expanded(
+    //         child: Container(
+    //           color: Colors.amber,
+    //           child: Text(
+    //             "座右銘",
+    //             style: TextStyle(fontSize: 30),
+    //           ),
+    //         )
+    //       ),
+    //     ],
+    //   )
+    //   );
+
+    // 3-4-3 SingleChildScrollView
     return Scaffold(
-      body: Column(
-        children: [
-          Expanded(
-            child: Container(
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
               width: 500,
               height: 500,
               color: Colors.blue,
@@ -49,30 +90,26 @@ class HomeScreen extends StatelessWidget {
                 "大頭照預留區",
                 style: TextStyle(fontSize: 30),
               ),
-            )
-          ),
-          Expanded(
-            child: Container(
-              height: 200,
+            ),
+            Container(
               width: 200,
+              height: 200,
               color: Colors.red,
               child: Text(
                 "簡介",
                 style: TextStyle(fontSize: 30),
               ),
-            )
-          ),
-          Expanded(
-            child: Container(
+            ),
+            Container(
               color: Colors.amber,
               child: Text(
                 "座右銘",
                 style: TextStyle(fontSize: 30),
               ),
             )
-          ),
-        ],
-      )
-      );
+          ]
+        ), 
+      ),
+    );
   }
 }
