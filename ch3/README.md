@@ -14,3 +14,11 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+
+## Build artifacts
+執行指令後 , 會在目錄下的 build 資料夾裡面有一個 web 目錄 , 該目錄就是生成的 html , css , javascript 與 assets 相關靜態檔案
+```
+# Use following command
+flutter build web
+```
