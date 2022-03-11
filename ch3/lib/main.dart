@@ -1,6 +1,7 @@
+import 'package:ch3/screens/aws_saa-class.dart';
 import 'package:ch3/screens/home_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:ch3/screens/second_screen.dart';
+import 'package:ch3/screens/book_screen.dart';
 
 class AppEntryPoint extends StatelessWidget {
   
@@ -9,7 +10,8 @@ class AppEntryPoint extends StatelessWidget {
     return MaterialApp(
       routes: {
         "/": (BuildContext context) => HomeScreen(),
-        "/second": (BuildContext context) => SecondScreen(),
+        "/cloud-architecture-guide": (BuildContext context) => SecondScreen(),
+        "/aws-saa-class": (BuildContext context) => AwsSaaClassScreen(),
       },
       initialRoute: "/",
     );
