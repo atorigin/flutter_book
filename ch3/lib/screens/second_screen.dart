@@ -5,7 +5,12 @@ class SecondScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text("第二個頁面"),
+      body: TextButton(
+        child: Text("彈回主頁"),
+        onPressed: () {
+          Navigator.pop(context);
+        },
+      ),
     );
   }
 }
