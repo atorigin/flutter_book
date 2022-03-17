@@ -1,4 +1,8 @@
+import 'package:ch4/components/common_drawer.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:ch4/daos/todo_dao.dart';
+import 'package:ch4/components/todo_component.dart';
 
 class TodoInputDemoScreen extends StatefulWidget {
   
@@ -27,19 +31,21 @@ class _TodoInputDemoScreen extends State<TodoInputDemoScreen> {
         controller: textEditController,
         onSubmitted: (inputValue){
           setState(() {
-            this.widget.todoList.add(inputValue);
+            context.read<TodoDao>().insertTodo(inputValue);
             textEditController.clear();
           });
         },
       )
     );
     return Scaffold(
+      appBar: AppBar(),
+      drawer: CommonDrawer.getDrawer(context),
       body: Container(
         alignment: Alignment.topCenter,
         child: Column(
           children: [
             userInputTextField,
-            ...this.widget.todoList.map((taskString) => Text(taskString)).toList()
+            ...context.watch<TodoDao>().getTodos().map((taskTodo) => Container(child: TodoComponent(taskTodo))).toList()
           ],
         ),
       ),

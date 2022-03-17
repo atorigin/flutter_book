@@ -1,3 +1,4 @@
+import 'package:ch4/components/common_drawer.dart';
 import 'package:flutter/material.dart';
 
 class ColorfulDemoScreen extends StatefulWidget {
@@ -30,6 +31,8 @@ class _ColorfulDemoScreenState extends State<ColorfulDemoScreen> {
       );
     }
     return Scaffold(
+      appBar: AppBar(),
+      drawer: CommonDrawer.getDrawer(context),
       body: Container(
         alignment: Alignment.topCenter,
         child: Column(
