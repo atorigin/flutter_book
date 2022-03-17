@@ -33,7 +33,7 @@ class _TodoComponentState extends State<TodoComponent> {
       child: Text(
         this.widget.todo.content,
 
-        style: (this.widget.todo.isComplete == true) ? TextStyle(decoration: TextDecoration.lineThrough):TextStyle(),
+        style: (this.widget.todo.isComplete == true) ? TextStyle(decoration: TextDecoration.lineThrough):TextStyle(), // 相當於 if-else ? 當結果為 true 返回 TextStyle(decoration) , 反之則返回 TextStyle
       ),
     );
 
